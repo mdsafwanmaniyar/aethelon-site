@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aethelon</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Inter',sans-serif;
+    }
+
+    body{
+      background:#050816;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    .bg{
+      position:fixed;
+      width:100%;
+      height:100%;
+      background:
+      radial-gradient(circle at top left,#1e3a8a55,transparent 35%),
+      radial-gradient(circle at bottom right,#06b6d455,transparent 35%),
+      #050816;
+      z-index:-1;
+    }
+
+    nav{
+      width:100%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:25px 8%;
+      backdrop-filter:blur(10px);
+    }
+
+    .logo{
+      font-size:28px;
+      font-weight:700;
+      letter-spacing:2px;
+    }
+
+    .menu{
+      display:flex;
+      gap:30px;
+    }
+
+    .menu a{
+      color:#cbd5e1;
+      text-decoration:none;
+      transition:0.3s;
+    }
+
+    .menu a:hover{
+      color:white;
+    }
+
+    .hero{
+      min-height:90vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:20px;
+    }
+
+    .hero h1{
+      font-size:80px;
+      font-weight:700;
+      background:linear-gradient(to right,#60a5fa,#22d3ee);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .hero p{
+      margin-top:20px;
+      max-width:700px;
+      color:#94a3b8;
+      line-height:1.8;
+      font-size:18px;
+    }
+
+    .buttons{
+      margin-top:40px;
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+      justify-content:center;
+    }
+
+    .btn{
+      padding:14px 28px;
+      border-radius:12px;
+      border:none;
+      cursor:pointer;
+      font-size:16px;
+      transition:0.3s;
+      text-decoration:none;
+    }
+
+    .primary{
+      background:linear-gradient(to right,#2563eb,#06b6d4);
+      color:white;
+    }
+
+    .primary:hover{
+      transform:translateY(-3px);
+      box-shadow:0 10px 25px #2563eb55;
+    }
+
+    .secondary{
+      background:#111827;
+      border:1px solid #334155;
+      color:white;
+    }
+
+    .secondary:hover{
+      background:#1e293b;
+    }
+
+    .section{
+      padding:80px 8%;
+    }
+
+    .section-title{
+      font-size:40px;
+      margin-bottom:50px;
+      text-align:center;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .card{
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.08);
+      backdrop-filter:blur(10px);
+      padding:30px;
+      border-radius:20px;
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-6px);
+      border-color:#38bdf8;
+    }
+
+    .card h3{
+      margin-bottom:15px;
+      font-size:22px;
+    }
+
+    .card p{
+      color:#94a3b8;
+      line-height:1.7;
+    }
+
+    footer{
+      padding:30px;
+      text-align:center;
+      color:#64748b;
+      border-top:1px solid rgba(255,255,255,0.08);
+      margin-top:50px;
+    }
+
+    @media(max-width:768px){
+
+      .hero h1{
+        font-size:55px;
+      }
+
+      .menu{
+        display:none;
+      }
+
+      .hero p{
+        font-size:16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="bg"></div>
+
+  <nav>
+    <div class="logo">AETHELON</div>
+
+    <div class="menu">
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+
+    <h1>Aethelon</h1>
+
+    <p>
+      Building futuristic digital products, intelligent platforms,
+      and scalable technology ecosystems for the next generation.
+    </p>
+
+    <div class="buttons">
+      <a href="#" class="btn primary">Explore Products</a>
+      <a href="#" class="btn secondary">Learn More</a>
+    </div>
+
+  </section>
+
+  <section class="section">
+
+    <h2 class="section-title">Our Ecosystem</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>AI Platforms</h3>
+        <p>
+          Intelligent systems and AI-powered experiences built for
+          modern applications.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Cloud Solutions</h3>
+        <p>
+          Scalable cloud infrastructure and secure deployment
+          architecture for digital products.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Cybersecurity</h3>
+        <p>
+          Advanced security-driven systems focused on privacy,
+          protection, and reliability.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <footer>
+    © 2026 Aethelon. All rights reserved.
+  </footer>
+
+</body>
+</html>
